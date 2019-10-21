@@ -1,0 +1,39 @@
+{
+  "name": "studiomitte/ttaddress-country-relation",
+  "type": "typo3-cms-extension",
+  "description": "Add a relation to static_countries in tt_address",
+  "keywords": [
+    "TYPO3",
+    "extension",
+    "addresses",
+    "country"
+  ],
+  "homepage": "https://studiomitte.com/",
+  "authors": [
+    {
+      "name": "Georg Ringer",
+      "role": "Developer"
+    }
+  ],
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "typo3/cms-core": "^9.5 || ^10.0",
+    "php": ">=7.2",
+    "friendsoftypo3/tt-address": "^5",
+    "evoweb/extender": "^6 || ^7",
+    "sjbr/static-info-tables": "^6"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "ttaddress_country_relation"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "StudioMitte\\TtaddressCountryRelation\\": "Classes"
+    }
+  },
+  "replace": {
+    "typo3-ter/ttaddress-country-relation": "self.version"
+  }
+}
