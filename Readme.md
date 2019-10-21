@@ -29,3 +29,9 @@ Call the script with
 ```bash
 ./typo3cms ttaddress_country_relation:migrate
 ```
+
+## Author
+
+This extension has been created by **[StudioMitte](https://studiomitte.com/)**, based in Linz.
+
+![Studio Mitte](Resources/Public/Logos/studiomitte-logo.png)
