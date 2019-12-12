@@ -9,7 +9,7 @@ call_user_func(
                 'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.country',
                 'config' => [
                     'size' => 1,
-                    'default' => 0.
+                    'default' => 0,
                     'minitems' => 0,
                     'maxitems' => 1,
                     'type' => 'group',
