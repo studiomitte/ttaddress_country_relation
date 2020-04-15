@@ -11,6 +11,11 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
     protected $countryRelation = null;
 
     /**
+     * @var \SJBR\StaticInfoTables\Domain\Model\CountryZone
+     */
+    protected $regionRelation = null;
+
+    /**
      * @return \SJBR\StaticInfoTables\Domain\Model\Country
      */
     public function getCountryRelation(): ?\SJBR\StaticInfoTables\Domain\Model\Country
@@ -26,4 +31,19 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
         $this->countryRelation = $countryRelation;
     }
 
+    /**
+     * @return \SJBR\StaticInfoTables\Domain\Model\CountryZone
+     */
+    public function geRegionRelation(): ?\SJBR\StaticInfoTables\Domain\Model\CountryZone
+    {
+        return $this->regionRelation;
+    }
+
+    /**
+     * @param \SJBR\StaticInfoTables\Domain\Model\CountryZone $regionRelation
+     */
+    public function setRegionRelation(\SJBR\StaticInfoTables\Domain\Model\CountryZone $regionRelation): void
+    {
+        $this->regionRelation = $regionRelation;
+    }
 }
