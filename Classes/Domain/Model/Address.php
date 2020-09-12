@@ -34,7 +34,7 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
     /**
      * @return \SJBR\StaticInfoTables\Domain\Model\CountryZone
      */
-    public function geRegionRelation(): ?\SJBR\StaticInfoTables\Domain\Model\CountryZone
+    public function getRegionRelation(): ?\SJBR\StaticInfoTables\Domain\Model\CountryZone
     {
         return $this->regionRelation;
     }
