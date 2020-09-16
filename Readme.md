@@ -12,11 +12,12 @@ This TYPO3 extensions adds a new field to `tt_address` to allow a relation to th
 
 ### Hide previous field
 
-Hide the country text field by using Page TsConfig.
+Hide the country or region text field by using Page TsConfig.
 
 ```
 TCEFORM.tt_address {
     country.disabled = 1
+    region.disabled = 1
 }
 ```
 
