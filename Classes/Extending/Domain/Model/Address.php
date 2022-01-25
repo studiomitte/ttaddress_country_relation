@@ -1,6 +1,8 @@
 <?php
 
-namespace StudioMitte\TtaddressCountryRelation\Domain\Model;
+declare(strict_types=1);
+
+namespace StudioMitte\TtaddressCountryRelation\Extending\Domain\Model;
 
 class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
 {
@@ -8,12 +10,12 @@ class Address extends \FriendsOfTYPO3\TtAddress\Domain\Model\Address
     /**
      * @var \SJBR\StaticInfoTables\Domain\Model\Country
      */
-    protected $countryRelation = null;
+    protected $countryRelation;
 
     /**
      * @var \SJBR\StaticInfoTables\Domain\Model\CountryZone
      */
-    protected $regionRelation = null;
+    protected $regionRelation;
 
     /**
      * @return \SJBR\StaticInfoTables\Domain\Model\Country

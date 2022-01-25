@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace StudioMitte\TtaddressCountryRelation\Migration;
@@ -8,7 +9,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class MigrationService
 {
-
     public function run(): int
     {
         $count = 0;
@@ -20,7 +20,7 @@ class MigrationService
             ->where(
                 $queryBuilder->expr()->eq('country_relation', $queryBuilder->createNamedParameter(0, \PDO::PARAM_INT)),
                 $queryBuilder->expr()->neq('country', $queryBuilder->createNamedParameter('', \PDO::PARAM_STR)),
-                )
+            )
             ->execute()
             ->fetchAll();
         foreach ($rows as $row) {
@@ -43,10 +43,10 @@ class MigrationService
         $connection->update(
             'tt_address',
             [
-                'country_relation' => $staticCountryId
+                'country_relation' => $staticCountryId,
             ],
             [
-                'uid' => $addressUid
+                'uid' => $addressUid,
             ]
         );
 

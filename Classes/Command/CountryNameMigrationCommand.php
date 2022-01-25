@@ -17,7 +17,7 @@ class CountryNameMigrationCommand extends Command
     /**
      * @inheritdoc
      */
-    protected function configure()
+    protected function configure(): void
     {
         $this->setDescription('Migrate tt_address country field');
     }
@@ -25,7 +25,7 @@ class CountryNameMigrationCommand extends Command
     /**
      * @inheritdoc
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): void
     {
         $service = GeneralUtility::makeInstance(MigrationService::class);
         $count = $service->run();

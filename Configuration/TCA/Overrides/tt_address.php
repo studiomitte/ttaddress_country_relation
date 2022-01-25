@@ -1,8 +1,10 @@
 <?php
+
+declare(strict_types=1);
 defined('TYPO3_MODE') || die('Access denied.');
 
 call_user_func(
-    function ($extKey) {
+    function ($extKey): void {
         $fields = [
             'country_relation' => [
                 'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.country',
@@ -18,16 +20,16 @@ call_user_func(
                     'suggestOptions' => [
                         'default' => [
                             'pidList' => '0',
-                            'additionalSearchFields' => 'cn_short_de'
-                        ]
+                            'additionalSearchFields' => 'cn_short_de',
+                        ],
                     ],
                     'fieldWizard' => [
                         'recordsOverview' => [
-                            'disabled' => true
+                            'disabled' => true,
                         ],
                         'tableList' => [
-                            'disabled' => true
-                        ]
+                            'disabled' => true,
+                        ],
                     ],
                 ],
             ],
@@ -45,16 +47,16 @@ call_user_func(
                     'suggestOptions' => [
                         'default' => [
                             'pidList' => '0',
-                            'additionalSearchFields' => 'zn_name_local'
-                        ]
+                            'additionalSearchFields' => 'zn_name_local',
+                        ],
                     ],
                     'fieldWizard' => [
                         'recordsOverview' => [
-                            'disabled' => true
+                            'disabled' => true,
                         ],
                         'tableList' => [
-                            'disabled' => true
-                        ]
+                            'disabled' => true,
+                        ],
                     ],
                 ],
             ],
