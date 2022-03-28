@@ -19,7 +19,7 @@
   "require": {
     "typo3/cms-core": "^11.0",
     "php": ">=7.4",
-    "friendsoftypo3/tt-address": "^5.3",
+    "friendsoftypo3/tt-address": "^5.3 || ^6",
     "evoweb/extender": "^8.1",
     "sjbr/static-info-tables": "^11.5"
   },
