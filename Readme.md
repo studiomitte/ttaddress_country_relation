@@ -31,8 +31,9 @@ Call the script with
 ./typo3cms ttaddress_country_relation:migrate
 ```
 
-## Author
+## Credits
 
-This extension has been created by **[StudioMitte](https://studiomitte.com/)**, based in Linz.
+This extension was created by Georg Ringer for [Studio Mitte, Linz](https://studiomitte.com) with ♥.
 
-![Studio Mitte](Resources/Public/Logos/studiomitte-logo.png)
+[Find more TYPO3 extensions we have developed](https://www.studiomitte.com/loesungen/typo3) that provide additional features for TYPO3 sites. 
+
