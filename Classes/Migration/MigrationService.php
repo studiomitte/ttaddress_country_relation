@@ -5,6 +5,9 @@ declare(strict_types=1);
 namespace StudioMitte\TtaddressCountryRelation\Migration;
 
 use TYPO3\CMS\Core\Database\ConnectionPool;
+use TYPO3\CMS\Core\Database\Query\Restriction\EndTimeRestriction;
+use TYPO3\CMS\Core\Database\Query\Restriction\HiddenRestriction;
+use TYPO3\CMS\Core\Database\Query\Restriction\StartTimeRestriction;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class MigrationService
@@ -14,6 +17,11 @@ class MigrationService
         $count = 0;
 
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tt_address');
+        $queryBuilder->getRestrictions()
+            ->removeByType(HiddenRestriction::class)
+            ->removeByType(StartTimeRestriction::class)
+            ->removeByType(EndTimeRestriction::class);
+
         $rows = $queryBuilder
             ->select('uid', 'country')
             ->from('tt_address')
@@ -23,6 +31,7 @@ class MigrationService
             )
             ->execute()
             ->fetchAll();
+
         foreach ($rows as $row) {
             if ($this->updateSingleRow($row['country'], $row['uid'])) {
                 $count++;
