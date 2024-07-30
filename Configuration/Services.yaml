@@ -10,3 +10,8 @@ services:
         command: 'ttaddress_country_relation:migrate'
         description: 'Migrate tt_address country field'
         schedulable: false
+
+  StudioMitte\TtaddressCountryRelation\Extending\Domain\Model\Address:
+    tags:
+      - name: 'extender.extends'
+        class: FriendsOfTYPO3\TtAddress\Domain\Model\Address
