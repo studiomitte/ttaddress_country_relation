@@ -14,7 +14,6 @@ call_user_func(
                     'minitems' => 0,
                     'maxitems' => 1,
                     'type' => 'group',
-                    'internal_type' => 'db',
                     'allowed' => 'static_countries',
                     'foreign_table' => 'static_countries',
                     'suggestOptions' => [
@@ -41,7 +40,6 @@ call_user_func(
                     'minitems' => 0,
                     'maxitems' => 1,
                     'type' => 'group',
-                    'internal_type' => 'db',
                     'allowed' => 'static_country_zones',
                     'foreign_table' => 'static_country_zones',
                     'suggestOptions' => [

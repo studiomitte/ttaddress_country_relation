@@ -13,18 +13,11 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class CountryNameMigrationCommand extends Command
 {
-
-    /**
-     * @inheritdoc
-     */
     protected function configure(): void
     {
         $this->setDescription('Migrate tt_address country field');
     }
 
-    /**
-     * @inheritdoc
-     */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $service = GeneralUtility::makeInstance(MigrationService::class);
