@@ -13,19 +13,12 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class CountryNameMigrationCommand extends Command
 {
-
-    /**
-     * @inheritdoc
-     */
     protected function configure(): void
     {
         $this->setDescription('Migrate tt_address country field');
     }
 
-    /**
-     * @inheritdoc
-     */
-    protected function execute(InputInterface $input, OutputInterface $output): void
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $service = GeneralUtility::makeInstance(MigrationService::class);
         $count = $service->run();
@@ -33,5 +26,7 @@ class CountryNameMigrationCommand extends Command
         $io = new SymfonyStyle($input, $output);
         $io->title($this->getDescription());
         $io->success(sprintf('Migrated %s records!', $count));
+
+        return Command::SUCCESS;
     }
 }
